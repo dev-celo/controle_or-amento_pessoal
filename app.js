@@ -66,12 +66,42 @@ function cadastrarDespesas(){
     )
     
     if(despesa.validarDados()){
-        //bd.gravar(despesa)
         //dialog sucesso
-        console.log('Dados válidos')
+        bd.gravar(despesa)
+        
+        // Manipulando o titulo do modal
+        var title = document.getElementById('titleModal')
+        title.className = 'modal-title text-success'
+        title.innerText = 'Registro gravado com sucesso!'
+
+        // Manipulando o subtitulo
+        var subtitle = document.getElementById('subTitle')
+        subtitle.innerText = 'Despesa cadastrada com sucesso!'
+
+        // Manipulando botão modal
+        var button = document.getElementById('buttonModal')
+        button.className = 'btn btn-success'
+        button.innerText = 'Pronto'
+
+
+        $('#modalRegistroDespesas').modal('show')
     }else{
         //dialogerro
-        console.log('Dados inválidos')
+
+        var title = document.getElementById('titleModal')
+        title.className = 'modal-title text-danger'
+        title.innerText = 'Erro ao inserir registro!'
+
+        // Manipulando o subtitulo
+        var subtitle = document.getElementById('subTitle')
+        subtitle.innerText = 'Preencha os campos em branco abaixo!'
+
+        // Manipulando botão modal
+        var button = document.getElementById('buttonModal')
+        button.className = 'btn btn-danger'
+        button.innerText = 'Fechar e preencher'
+
+        $('#modalRegistroDespesas').modal('show')
     }
     
 }
