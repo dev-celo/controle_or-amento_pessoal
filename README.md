@@ -3,7 +3,7 @@
 ## App desenvolvido em aula com o professor Jorge Sant Ana
 ### Desenvolvimento Web Completo 2022 - 20 cursos + 20 projetos(udemy)
 
-# Com intuito de praticar
+Com intuito de praticar
 
 * Linguagem de programação javascript.
 * Manipulação do DOM
