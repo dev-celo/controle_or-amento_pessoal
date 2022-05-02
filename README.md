@@ -1,11 +1,15 @@
-# Orçamento pessoal
+# Aplicativo para controle de gastos
 
-#App desenvolvido com a ajuda do professor Jorge Sant Ana
-#Desenvolvimento Web Completo 2022 - 20 cursos + 20 projetos
+## App desenvolvido em aula com o professor Jorge Sant Ana
+### Desenvolvimento Web Completo 2022 - 20 cursos + 20 projetos(udemy)
 
-#com intuito de praticar o que aprendemos na teoria do estudo
-#da linguagem de programação javascript.
+# Com intuito de praticar
 
-#data de inicio: 26-04-2022
+* Linguagem de programação javascript.
+* Manipulação do DOM
+* Manipulação do BOM
+* Uso do armazenamento local do browser como um suposto banco de dados
+
+#### Você pode visitar essa aplicação [Clicando aqui](https://dev-celo.github.io/controle_orcamento_pessoal/index.html).
 
 Olá eu sou Marcelo, seja bem vindo, e sinta-se a vontade para opinar!!!  :)
