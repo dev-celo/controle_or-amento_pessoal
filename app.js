@@ -63,6 +63,7 @@ class Bd {
                 continue
             }
 
+            despesa.id = i
             despesas.push(despesa)
         }
 
@@ -79,7 +80,7 @@ class Bd {
         //console.log(despesa)
         //console.log(despesasFiltradas)
 
-        //ano 
+        //ano
         if (despesa.ano != '') {
             despesasFiltradas = despesasFiltradas.filter(d => d.ano == despesa.ano)
         }
@@ -106,9 +107,13 @@ class Bd {
 
         return despesasFiltradas
     }
+
+    remover_despesa_lista(id){
+        localStorage.removeItem(id)
+    }
 }
 
-//instânciando um objeto Bd 
+//instânciando um objeto Bd
 let bd = new Bd()
 
 function cadastrarDespesas() {
@@ -197,7 +202,7 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
     if(despesas.length == 0 && filtro  == true){
         alert('Não encontrado')
     }
-    
+
     //seleciona o elemento tbody da tabela
     let listaDespesas = document.getElementById('listaDespesas')
     listaDespesas.innerHTML = ''
@@ -230,6 +235,22 @@ function carregaListaDespesas(despesas = Array(), filtro = false) {
         linha.insertCell(1).innerHTML = `${d.tipo}`
         linha.insertCell(2).innerHTML = `${d.descricao}`
         linha.insertCell(3).innerHTML = `${d.valor}`
+
+        // Criar botão de exclusão
+        let btn = document.createElement("button")
+        btn.className = 'btn btn-danger'
+        btn.innerHTML = '<i class="fas fa-times"><i>'
+        btn.id = `id_despesa_${d.id}`
+        btn.onclick = function() {
+            //remover a despesa
+            let id = this.id.replace('id_despesa_', '')
+            //alert(id)
+
+            bd.remover_despesa_lista(id)
+
+            window.location.reload()
+        }
+        linha.insertCell(4).append(btn)
     })
 }
 
@@ -246,7 +267,7 @@ function pesquisarDespesa() {
     let valor = document.getElementById('valor').value
 
     let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
-    
+
     let despesas  = bd.pesquisar(despesa)
 
     carregaListaDespesas(despesas, true)
