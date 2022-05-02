@@ -8,9 +8,9 @@ da linguagem de programação javascript e alguns conceitos relacionados à:.
 
 * Utilizando o local storage do browser.
 * Conceitos de DOM.
-* Conceitos de DBM.
+* Conceitos de BOM.
 
-# Vôce pode visitar esse site [Clicando aqui]()
+# Vôce pode visitar esse site [Clicando aqui](https://dev-celo.github.io/controle_orcamento_pessoal/)
 
 
 Olá eu sou Marcelo, seja bem vindo, e sinta-se a vontade para opinar!!!  :)
