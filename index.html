@@ -116,7 +116,7 @@
       
       <div class="row">
         <div class="col d-flex justify-content-center btn-lg">
-          <button type="button" class="btn btn-success btn-lg" href="consulta.html">
+          <button type="button" class="btn btn-success btn-lg" id="consulta" onclick="consulta()">
             <label for="buscar">Consultar despesa(s) cadastrada</label>
             <i class="fas fa-search" name="buscar"></i>
           </button>
@@ -152,6 +152,10 @@
       }
 
       efeito_maquina_escrever()
+
+      function consulta(){ 
+        window.location.href = "consulta.html"
+      }
     </script>
     
     <!-- Modal erro -->
