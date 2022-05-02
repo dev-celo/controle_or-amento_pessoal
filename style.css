@@ -1,0 +1,10 @@
+#navbar{
+    height: 6em;
+}
+#efeito_maquina_escrever{
+    max-width: 680px;
+    text-align: center;
+    margin: 68px auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: cornflowerblue;
+}

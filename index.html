@@ -14,6 +14,9 @@
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
+    <!-- Estilo -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- Script js -->
     <script src="app.js"></script>
 
@@ -22,7 +25,7 @@
   <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5" id="navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">
            <img src="logo.png" width="50" height="35" alt="Orçamento pessoal">
@@ -53,16 +56,16 @@
       </div>
 
       <div class="row mb-2">
-        <div class="col-md-2">
-          <select class="form-control" id="ano">
+        <div class="col-lg-4 col-md-12 mb-2">
+          <select class="form-control form-control-lg" id="ano">
             <option value="">Ano</option>
             <option value="2021">2021</option>
             <option value="2022">2022</option>
           </select>
         </div>
 
-        <div class="col-md-2">
-          <select class="form-control" id="mes">
+        <div class="col-lg-4 col-md-12 mb-2">
+          <select class="form-control form-control-lg" id="mes">
             <option value="">Mês</option>
             <option value="1">Janeiro</option>
             <option value="2">Fevereiro</option>
@@ -79,12 +82,14 @@
           </select>
         </div>
         
-        <div class="col-md-2">
-          <input type="text" class="form-control" placeholder="Dia" id="dia" />
+        <div class="col-lg-4 col-md-12 mb-2">
+          <input type="text" class="form-control form-control-lg" placeholder="Dia" id="dia" />
         </div>
+      </div>
 
-        <div class="col-md-6">
-          <select class="form-control" id="tipo">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-2">
+          <select class="form-control form-control-lg" id="tipo">
             <option value="">Tipo</option>
             <option value="1">Alimentação</option>
             <option value="2">Educação</option>
@@ -93,18 +98,16 @@
             <option value="5">Transporte</option>
           </select>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-8">
-          <input type="text" class="form-control" placeholder="Descrição" id="descricao" />
+        <div class="col-lg-4 col-md-12 mb-2">
+          <input type="text" class="form-control form-control-lg" placeholder="Descrição" id="descricao" />
         </div>
 
-        <div class="col-md-2">
-          <input type="text" class="form-control" placeholder="Valor" id="valor" />
+        <div class=" col-lg-3 col-md-8 mb-2">
+          <input type="text" class="form-control form-control-lg" placeholder="Valor" id="valor" />
         </div>
 
-        <div class="col-md-2 d-flex justify-content-end">
+        <div class="col-lg-1 col-md-4 mb-2 d-flex justify-content-end btn-lg">
           <button type="button" class="btn btn-primary" onclick="cadastrarDespesas()">
             <i class="fas fa-plus"></i>
           </button>
@@ -112,6 +115,35 @@
       </div>
     </div>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 id="efeito_maquina_escrever">
+            Olá eu sou Marcelo H. P. Silva. Esse site desenvolvido com foco em cadastro e consulta de despesas. Realizado com o intuito de aprender as principais funcionalidade da linguagem de programação Javascript!
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function efeito_maquina_escrever(){
+        let titulo = document.querySelector('#efeito_maquina_escrever')
+
+        const textoArray = titulo.innerHTML.split('');
+
+        titulo.innerHTML = ' '
+
+        textoArray.forEach(function(letra, i){   
+      
+          setTimeout(function(){
+              titulo.innerHTML += letra;
+          }, 75 * i)
+      
+        });
+      }
+
+      efeito_maquina_escrever()
+    </script>
     
     <!-- Modal erro -->
     <div class="modal fade" id="modalRegistroDespesas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
